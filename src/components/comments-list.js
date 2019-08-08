@@ -8,23 +8,22 @@ const Comments = ({comments, actionComments, deleteComments}) => {
      useEffect(() =>{
         actionComments();
      }, [])
-     
+
+
      const deleta = (id) => {
-         console.log(id)
         deleteComments(id)
         }
-        
     return (
         <>
             <button>Логин</button>
                 <ul>
-                    {comments.map(comment => (
+                    {comments.comments.map(comment => (
                         <li key={comment.id}>
                             <Comment 
                             comment={comment}
                             />
                             <button onClick={() => deleta(comment.id)}>deletе button</button>
-                         </li>
+                        </li>
                     ))}
                 </ul>
         </>

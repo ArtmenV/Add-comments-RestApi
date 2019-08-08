@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 export const actionComments = () => async dispatch => {
-   const loadComment = await axios.get('https://jsonplaceholder.typicode.com/comments')
+   const loadComment = await axios.get('https://jsonplaceholder.typicode.com/posts')
    
     return dispatch ({
         type: LOAD_COMMENTS,
@@ -17,5 +17,3 @@ export const deleteComments = (id) => {
         payload: {id}
     })
 }
-
-
